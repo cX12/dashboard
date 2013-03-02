@@ -2,13 +2,7 @@
     <!-- AJAX Content Refresh -->
     <!-- Uptime -->
     <script type="text/javascript">
-      $(document).ready(function(){
-	setInterval("updateKernel()", 100000); // kernel
-        setInterval("updateUptime()", 1000);  // uptime
-	setInterval("updateLoad()", 30000); // load	
-	setInterval("updateMemory()", 30000); // memory
-	setInterval("updateStorage()", 30000); // storage
-      });
+      <?php include('config/intervals.php'); ?>
       function updateKernel(){
 	$('#dashboard-kernel').html('<?php echo exec('uname -r'); ?>');
       }
@@ -30,27 +24,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.php">Dashboard</a>
-	  <div class="nav-collapse collapse pull-right">
-            <ul class="nav">
-              <li class="active"><a href="#">General</a></li>
-              <li><a href="network.php">Network</a></li>
-              <li><a href="stats.php">Statistics</a></li>
-	      <li><a href="apps.php">Software</a></li>
-	      <li><a href="test.php">Notifications</a></li>
-	    </ul>
-	  </div>
-        </div>
-      </div>
-    </div>
+    <?php include('internals/layout/navbar.php'); ?>
 
     <div class="container">
 
@@ -99,24 +73,6 @@
 	      <?php include('internals/functions/storage.php'); ?>
 	</span>
       </div>
-
-      <br /><h2>Network</h2>
-      <div class="row">
-        <span class="span12">
-          <table class="table">
-            <thead>
-              <th><span class="color">Protocol</span></th>
-              <th><span class="color">R-Queue</span></th>
-              <th><span class="color">S-Queue</span></th>
-              <th><span class="color">Local address</span></th>
-              <th><span class="color">Foreign address</span></th>
-              <th><span class="color">State</span></th>
-            </thead>
-              <?php include('internals/functions/network.php'); ?>
-          </table>
-        </span>
-        </div>
-
 
       </div>
 
