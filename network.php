@@ -3,6 +3,9 @@
     <!-- Uptime -->
     <script type="text/javascript">
       <?php include('config/intervals.php'); ?>
+      function updateTraffic() {
+        $('#dashboard-traffic').load('internals/functions/traffic.php');
+      }
       function updateNetwork() {
         $('#dashboard-network').load('internals/functions/network.php');
       }

@@ -10,6 +10,7 @@ $interval_load = 30000; // system load
 $interval_memory = 30000; // memory status
 $interval_storage = 30000; // storage information
 $interval_network = 30000; // active network connections
+$interval_traffic = 300000; // data traffic
 
 // DON'T EDIT ANYTHING BELOW
 
@@ -22,6 +23,7 @@ $(document).ready(function(){
   setInterval('updateMemory()', ".$interval_memory."); // memory
   setInterval('updateStorage()', ".$interval_storage."); // storage
   setInterval('updateNetwork()', ".$interval_network."); // network
+  setInterval('updateTraffic()', ".$interval_traffic."); // traffic
 });
 
 ";
