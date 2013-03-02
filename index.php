@@ -67,7 +67,6 @@
 	</span>
       </div>
 
-      <br /><h2>Storage</h2>
       <div class="row">	
         <span class="span12" id="dashboard-storage">
 	      <?php include('internals/functions/storage.php'); ?>
