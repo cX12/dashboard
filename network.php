@@ -17,6 +17,12 @@
     <div class="container">
 
       <div class="row">
+        <span class="span12" id="dashboard-traffic">
+	  <?php include('internals/functions/traffic.php'); ?>
+	</span>
+      </div>
+
+      <div class="row">
         <span class="span12" id="dashboard-network">
           <?php include('internals/functions/network.php'); ?>
         </span>
