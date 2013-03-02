@@ -12,11 +12,17 @@
       function updateLoad() {
         $('#dashboard-load').load('internals/functions/load.php');
       }
-      function updateMemory() {
+      function updateMemory(){
         $('#dashboard-memory').load('internals/functions/memory.php');
       }
-      function updateStorage() {
+      function updateStorage(){
         $('#dashboard-storage').load('internals/functions/storage.php');
+      }
+      function updateNetwork(){
+	$('#dashboard-network').load('internals/functions/network.php');
+      }
+      function updateTraffic(){
+        $('#dashboard-traffic').load('internals/functions/traffic.php');
       }
     </script>
 
@@ -72,6 +78,19 @@
 	      <?php include('internals/functions/storage.php'); ?>
 	</span>
       </div>
+
+      <div class="row">
+        <span class="span12" id="dashboard-traffic">
+          <?php include('internals/functions/traffic.php'); ?>
+        </span>
+      </div>
+
+      <div class="row">
+        <span class="span12" id="dashboard-network">
+          <?php include('internals/functions/network.php'); ?>
+        </span>
+      </div>
+
 
       </div>
 
