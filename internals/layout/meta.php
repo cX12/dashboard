@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Dashboard</title>
+    <?php include('config/details.php'); ?>
+    <title><?php echo $device_name; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -17,6 +18,7 @@
 
     <link href="internals/stylesheet.css" rel="stylesheet">
     <script src="internals/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
